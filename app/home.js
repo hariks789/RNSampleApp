@@ -20,6 +20,7 @@ class Home extends Component {
     drawerLabel: '',
     header: 'none'
   };
+  
   render() {
     return (
       <View style={styles.container}>
