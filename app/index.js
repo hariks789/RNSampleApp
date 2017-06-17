@@ -29,11 +29,11 @@ const Routes = {
 
 export default class App extends React.Component {
   render() {
-    return <SimpleApp/>;
+    return <AppNavigator />;
   }
 }
 
-const SimpleApp = StackNavigator(
+const AppNavigator = StackNavigator(
   {
     ...Routes,
     Home: { screen: HomeScreen },

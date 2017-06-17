@@ -22,7 +22,7 @@ export default class Screen2 extends Component {
         <Text style={styles.welcome}>
           Welcome to Screen2!!!
         </Text>
-        <Button title={'Go Back'} onPress={()=>this.props.navigation.goBack()} color={'green'} />
+        <Button title={'Go Back'} onPress={()=>this.props.navigation.goBack()} color={'white'} />
       </View>
     );
   }
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#26A69A',
   },
   welcome: {
     fontSize: 20,

@@ -17,7 +17,7 @@ class SideMenu extends Component {
       <View style={styles.rootContainer}>
         <View style={styles.topContainer}>
           <View style={styles.userImageContainer}>
-            <Image source={require('./user1.png')}
+            <Image source={require('./user.jpg')}
             style={styles.userImage}
             />
           </View>
@@ -32,18 +32,24 @@ class SideMenu extends Component {
             onPress={
               () => {
                 this.props.closeDrawer();
+                this.props.navigation.navigate('Screen1');
+              }
+            }
+          >
+            <Icon name="airplay" size={20} color='black' />
+            <Text style={styles.label}>Screen 1</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={
+              () => {
+                this.props.closeDrawer();
                 this.props.navigation.navigate('Screen2');
               }
             }
           >
-            <Icon name="rocket" size={20} color='black' />
+            <Icon name="airplay" size={20} color='black' />
             <Text style={styles.label}>Screen 2</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-          style={styles.buttonContainer}
-          >
-            <Icon name="logout" size={20} color='black' />
-            <Text style={styles.label}>Logout</Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -23,13 +23,12 @@ const styles = StyleSheet.create ({
     paddingLeft: paddingLeft,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderColor: '#d9d9d9',
-    backgroundColor: '#004788'
+    borderColor: '#546E7A',
+    backgroundColor: '#546E7A'
   },
   userImageContainer: {
     height: imageSize,
     width: imageSize,
-    borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: imageRadius,
@@ -43,15 +42,18 @@ const styles = StyleSheet.create ({
   },
   name: {
     color:'#ffffff',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: 18
   },
   role: {
     color:'#ffffff',
     fontWeight: 'bold',
-    paddingTop: 5
+    paddingTop: 5,
+    fontSize: 15
   },
   bottomContainer: {
-    flex: 0.75
+    flex: 0.75,
+    backgroundColor: '#B0BEC5'
   },
   nameContainer: {
     paddingTop: 10
@@ -63,8 +65,7 @@ const styles = StyleSheet.create ({
     paddingLeft: paddingLeft
   },
   label: {
-    fontWeight: 'bold',
-    paddingLeft: 10
+    paddingLeft: 10,
   }
 });
 
