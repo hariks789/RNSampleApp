@@ -9,50 +9,41 @@ import {
   ScrollView,
   Button
 } from 'react-native';
-import { DrawerNavigator } from 'react-navigation';
+import SideMenu from 'react-native-drawer';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Screen1 from './screen1';
 import Screen2 from './screen2';
 import Screen3 from './screen3';
+import MenuComponent from './sideMenu';
 
 class Home extends Component {
   static navigationOptions = {
     drawerLabel: '',
     header: 'none'
   };
-  
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to Home Screen!!!
-        </Text>
-        <Button title={'Goto Screen3'} onPress={()=>this.props.navigation.navigate('Screen3')} color={'white'} />
-        <Button title={'Open Drawer'} onPress={()=>this.props.navigation.navigate('DrawerOpen')} color={'green'} />
-      </View>
+      <SideMenu
+        ref={(ref) => this._drawer = ref}
+        content={<MenuComponent navigation={this.props.navigation} closeDrawer={()=>this._drawer.close()} />}
+        type="overlay"
+        tapToClose={true}
+        openDrawerOffset={0.4}
+      >
+        <View style={styles.container}>
+          <Text style={styles.welcome}>
+            Welcome to Home Screen!!!
+          </Text>
+          <Button title={'Goto Screen3'} onPress={()=>this.props.navigation.navigate('Screen3')} color={'white'} />
+          <Button title={'Open Drawer'} onPress={()=>this._drawer.open()} color={'green'} />
+        </View>
+      </SideMenu>
     );
   }
 }
 
-const SideDrawer = DrawerNavigator(
-  {
-    Home: { screen: Home },
-    Screen1: {
-      screen: Screen1,
-    },
-    Screen2: {
-      screen: Screen2,
-    },
-  },
-  {
-    initialRouteName: 'Home',
-    contentOptions: {
-      activeTintColor: '#e91e63',
-    },
-  }
-);
-
-export default SideDrawer;
+export default Home;
 
 const styles = StyleSheet.create({
   container: {
