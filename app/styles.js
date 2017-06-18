@@ -10,7 +10,7 @@ let buttonHeight = 40;
 const styles = StyleSheet.create ({
   rootContainer: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: '#B0BEC5',
   },
   backgroundImage: {
     flex: 1,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create ({
     fontSize: 15
   },
   bottomContainer: {
-    flex: 0.75,
+    flex: 0.65,
     backgroundColor: '#B0BEC5'
   },
   nameContainer: {
@@ -64,8 +64,18 @@ const styles = StyleSheet.create ({
     alignItems: 'center',
     paddingLeft: paddingLeft
   },
+  footerContainer: {
+    flex: 0.1,
+    backgroundColor: '#B0BEC5',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  footer: {
+    fontSize: 12
+  },
   label: {
     paddingLeft: 10,
+    color: 'black'
   }
 });
 

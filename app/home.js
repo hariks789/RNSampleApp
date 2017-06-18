@@ -4,6 +4,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  StatusBar,
   View,
   Platform,
   ScrollView,
@@ -43,11 +44,12 @@ class Home extends Component {
         }}
         openDrawerOffset={0.4}
       >
+        <StatusBar hidden />
         <View style={styles.container}>
           <Text style={styles.welcome}>
             Welcome to Home Screen!!!
           </Text>
-          <Button title={'Goto Screen3'} onPress={()=>this.props.navigation.navigate('Screen3', {from: 'Home'})} color={'white'} />
+          <Button title={'Goto Screen3'} onPress={()=>this.props.navigation.navigate('Screen3', {from: 'Home'})} color={'#37474F'} />
           <Button title={'Open Drawer'} onPress={()=>this._drawer.open()} color={'green'} />
         </View>
       </SideMenu>

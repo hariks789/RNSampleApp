@@ -21,7 +21,7 @@ export default class Screen3 extends Component {
         <Text style={styles.welcome}>
           Welcome to Screen3!!!
         </Text>
-        <Button title={'Goto Screen2'} onPress={()=>this.props.navigation.navigate('Screen2')} color={'white'} />
+        <Button title={'Goto Screen2'} onPress={()=>this.props.navigation.navigate('Screen2')} color={'#37474F'} />
         <Button title={`Go Back To ${state.params.from}`} onPress={()=>this.props.navigation.goBack()} color={'green'} />
       </View>
     );

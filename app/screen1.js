@@ -22,7 +22,7 @@ export default class Screen1 extends Component {
         <Text style={styles.welcome}>
           Welcome to Screen1!!!
         </Text>
-        <Button title={'Go Back'} onPress={()=>this.props.navigation.goBack()} color={'white'} />
+        <Button title={'Go Back'} onPress={()=>this.props.navigation.goBack()} color={'#37474F'} />
       </View>
     );
   }

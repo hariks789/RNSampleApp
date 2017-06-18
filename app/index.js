@@ -15,7 +15,7 @@ import Screen3 from './screen3';
 const Routes = {
   Screen1: {
     name: 'Screen1',
-    screen: Screen2,
+    screen: Screen1,
   },
   Screen2: {
     name: 'Screen2',

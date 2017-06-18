@@ -52,6 +52,10 @@ class SideMenu extends Component {
             <Text style={styles.label}>Screen 2</Text>
           </TouchableOpacity>
         </View>
+        <View style={styles.footerContainer}>
+          <Text style={styles.footer}>RNSampleApp</Text>
+          <Text style={styles.footer}>Version 0.0.1</Text>
+        </View>
       </View>
     );
   }
